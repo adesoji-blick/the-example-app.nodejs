@@ -1,17 +1,13 @@
 pipeline {
 	any agent	
-		
 	Stages {
-		stage ('stage one') {
+	 	stage ('stage one') {
 			steps {
 			     echo "building package"
 			     sh 'npm install'
-
                        } 
-
-		} 
-
-              stage ('stage two') { 
+	       	} 
+	        stage ('stage two') { 
 	      		steps {
 			     sh "npm run start:dev &"
 			     echo 'app successfully deployed'
@@ -20,8 +16,7 @@ pipeline {
 
 	  		} 
 		} 
-
-	}
+}
 
 
 
