@@ -1,0 +1,31 @@
+pipeline {
+	any agent	
+		
+	Stages {
+		stage ('stage one') {
+			steps {
+			     echo "building package"
+			     sh 'npm install'
+
+                       } 
+
+		} 
+
+              stage ('stage two') { 
+	      		steps {
+			     sh "sudo cp target/the-example-app.nodejs.war /usr/share/tomcat/webapps"
+			     echo 'successfully deployed'
+
+				} 
+
+	  		} 
+		} 
+
+	}
+
+
+
+
+
+
+
