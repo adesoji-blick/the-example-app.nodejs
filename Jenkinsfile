@@ -11,7 +11,7 @@ pipeline {
 
          stage ('stage two') {
              steps  {
-                 sh "npm run start:dev &"
+                 sh 'npm run start:dev &'
 		 echo 'successfuly deployed'
              }
          }
